@@ -1,0 +1,8 @@
+version: "3"
+services:
+  frontend:
+    environment:
+      - PORT=3040
+    volumes:
+      - ./frontend:/app:delegated
+    working_dir: /app

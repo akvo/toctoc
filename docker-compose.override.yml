@@ -1,0 +1,8 @@
+version: "3"
+services:
+  frontend:
+    image: akvo/akvo-node-14-alpine:20210106.152005.1864760
+    ports:
+      - 3040:3040
+    command: ["./start.sh"]
+    restart: unless-stopped

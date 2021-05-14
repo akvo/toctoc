@@ -1,0 +1,25 @@
+{
+  "name": "akvo-toctoc",
+  "scripts": {
+    "build": "snowpack build",
+    "start": "snowpack dev"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "@snowpack/plugin-webpack": "^2.3.1",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.23.2",
+    "prettier": "2.3.0",
+    "snowpack": "^3.4.0"
+  },
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "AGPL 3.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
