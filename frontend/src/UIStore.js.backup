@@ -1,0 +1,58 @@
+import { Store } from "pullstate";
+
+export const UIStore = new Store({
+  pathWays: {
+    1: { id: 1, title: "Gender and Youth" },
+    3: { id: 3, title: "Adocacy" },
+    4: { id: 4, title: "Living Income" },
+    5: {
+      id: 5,
+      title: "Producers effectiveness and environmental and climate change",
+    },
+  },
+  activePathWayId: 4,
+  cards: {
+    1: {
+      id: 1,
+      active: true,
+      lane: "strategy",
+      text: "1 Partner with CSOs to advocate toward public policy and international agreement on living income.",
+      deps: [3, 5],
+    },
+    2: {
+      id: 2,
+      active: true,
+      lane: "outcome",
+      text: "2 Partner with CSOs to advocate toward public policy and international agreement on living income.",
+      deps: [],
+    },
+    3: {
+      id: 3,
+      active: true,
+      lane: "outcome",
+      text: "International multi-lateral organisations (for example UN, EU) recognize LI as a human right",
+      deps: [],
+    },
+    4: {
+      id: 4,
+      active: true,
+      lane: "outcome",
+      text: "International multi-lateral organisations (for example UN, EU) recognize LI as a human rightj",
+      deps: [],
+    },
+    5: {
+      id: 5,
+      active: true,
+      lane: "impact",
+      text: "Family farmers realiuse a living income (for global categories) from agriculture (Contributes to SDG 2: zero hunger)",
+      deps: [1],
+    },
+    6: {
+      id: 6,
+      active: true,
+      lane: "strategy",
+      text: "Partner with CSOs to advocate toward public policy and international agreement on living income.",
+      deps: [],
+    },
+  },
+});

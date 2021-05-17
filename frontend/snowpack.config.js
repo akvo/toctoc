@@ -1,6 +1,8 @@
 // Snowpack Configuration File
 // See all supported options: https://www.snowpack.dev/reference/configuration
 
+const IS_TEST = process.env.NODE_ENV === "test";
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
@@ -33,9 +35,10 @@ module.exports = {
   ],
   packageOptions: {
     /* ... */
+    knownEntrypoints: ["antd"],
   },
   devOptions: {
-    port: 3040,
+    port: IS_TEST ? 3041 : 3040,
     /* ... */
   },
   buildOptions: {

@@ -1,0 +1,6 @@
+@use "defaults";
+
+.MainFooter {
+  padding: 1rem 0.5rem;
+  border-top: 1px solid defaults.$highlight-color;
+}

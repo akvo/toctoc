@@ -1,0 +1,37 @@
+$highlight-color: #4ec7e8;
+$default-padding: 0.5rem;
+
+@mixin defaultPadding {
+  padding: $default-padding;
+}
+
+@mixin highlightColor {
+  color: $highlight-color;
+}
+
+@mixin cellStyle {
+  color: #fff;
+  padding: $default-padding;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin cardStyle {
+  @include defaultPadding;
+  border-radius: 5px;
+  margin: 2rem;
+  text-transform: none;
+  border: 1px solid #fff;
+
+  .ant-typography {
+    color: #fff;
+  }
+}
+
+@mixin notActiveCard {
+  border: 1px solid #888;
+
+  .ant-typography {
+    color: #666;
+  }
+}

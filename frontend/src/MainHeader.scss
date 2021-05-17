@@ -1,0 +1,27 @@
+@use "defaults";
+
+.MainHeader {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid defaults.$highlight-color;
+  background-color: #fff;
+
+  .MainHeaderLeft {
+    h1 {
+      @include defaults.highlightColor;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  .MainHeaderRight {
+    text-align: right;
+
+    .pathWayDropdown {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}

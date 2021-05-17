@@ -1,0 +1,50 @@
+@use "../defaults";
+
+.BoardGrid {
+  .strategy {
+    $bgc: #77aa8c;
+    @include defaults.cellStyle;
+    background-color: $bgc;
+
+    div.card {
+      @include defaults.cardStyle;
+      background-color: #96bfa7;
+    }
+
+    div.deactive {
+      background-color: $bgc;
+      @include defaults.notActiveCard;
+    }
+  }
+
+  .outcome {
+    $bgc: #79bff5;
+    @include defaults.cellStyle;
+    background-color: $bgc;
+
+    div.card {
+      @include defaults.cardStyle;
+      background-color: #99cef7;
+    }
+    div.deactive {
+      background-color: #79bff5;
+      @include defaults.notActiveCard;
+    }
+  }
+
+  .impact {
+    $bgc: #f2630f;
+    @include defaults.cellStyle;
+    background-color: $bgc;
+
+    div.card {
+      @include defaults.cardStyle;
+      background-color: #f5883b;
+    }
+
+    div.deactive {
+      background-color: $bgc;
+      @include defaults.notActiveCard;
+    }
+  }
+}

@@ -1,30 +1,31 @@
-import React, { useState } from "react";
-import constructionLogoRef from "./construction.svg";
-import ExessBrand from "./ExcessBrand";
+import React from "react";
+import BoardController from "./BoardController";
+import MainFooter from "./MainFooter";
+import MainHeader from "./MainHeader";
+import { UIStore } from "./UIStore";
 import "./App.scss";
+import tocData from "./tocData.json";
 
-function ClickCount() {
-  const [count, setCount] = useState(0);
+function loadData(data) {
+  const { activePathWayId, cards, layout, title, pathWays } = data;
 
-  return (
-    <div>
-      <p>So far {count} votes to make this happen!</p>
-      <button onClick={() => setCount(count + 1)}>Vote!</button>
-    </div>
-  );
+  UIStore.update((s) => {
+    s.activePathWayId = activePathWayId;
+    s.layout = layout;
+    s.title = title;
+    s.cards = cards;
+    s.pathWays = pathWays;
+  });
 }
 
 function App() {
+  loadData(tocData);
   return (
-    <div className="App">
-      <ExessBrand />
-      <img
-        src={constructionLogoRef}
-        className="App-constructionlogo"
-        alt="Under construction"
-      />
-      <ClickCount />
-    </div>
+    <>
+      <MainHeader />
+      <BoardController />
+      <MainFooter />
+    </>
   );
 }
 

@@ -1,0 +1,5 @@
+@use "defaults";
+
+.BoardFilters {
+  @include defaults.defaultPadding;
+}

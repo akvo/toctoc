@@ -1,0 +1,17 @@
+@use "defaults";
+
+.BoardHeader {
+  .strategy {
+    @include defaults.cellStyle;
+    background-color: #8fcfac;
+  }
+  .outcome {
+    @include defaults.cellStyle;
+    background-color: #93caf0;
+  }
+
+  .impact {
+    @include defaults.cellStyle;
+    background-color: #f78c1b;
+  }
+}

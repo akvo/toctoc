@@ -1,17 +1,11 @@
+@use "defaults";
+
 body {
-  background-color: #f2f2f5;
-  color: #03ad8c;
+  color: #111;
+  border-top: 2px solid defaults.$highlight-color;
 }
 
-.App {
-  margin-top: 3rem;
-  text-align: center;
-
-  .App-constructionlogo {
-    margin-top: 1rem;
-    height: 40vmin;
-  }
-  p {
-    color: #111;
-  }
+.ant-layout,
+.ant-layout-footer {
+  background-color: #fff;
 }
